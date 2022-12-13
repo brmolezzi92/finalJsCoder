@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="container">
+                <div>Bruno Molezzi</div>
+                <div class="date">
+                    <div id="dateNumber">
+
+                    </div>
+                    <div>
+                        <div id="dateMonth">
+
+                        </div>
+                        <div id="dateYear">
+
+                        </div>
+                    </div>
+                    <div id="dateText">
+                    </div>
+                </div>
+                <div>
+                    <div class="container teext-center w-25 mt-4">
+
+                        <form>
+                            <input class="form-control" type="text" placeholder="elije tu ciudad">
+                            <button type="submit" class="mt-2 btn btn-primary">Buscar</button>
+                        </form>
+
+                        <div class="ciudad-container mt-4">
+                
+                        </div>
+                
+                
+                
+                    </div>
+                    <div class="weather">
+
+                        <div class="container teext-center w-25 mt-4">
+                            <div class="ciudad-container mt-4"></div>
+                        </div>
+
+                        <div id="contenedor">
+
+                            <div id="caja1">
+                                <h1 id="temperatura-valor"></h1>
+                                <h1 id="temperatura-descripcion"></h1>
+                            </div>
+
+                            <div id="caja2">
+                                <h2 id="ubicaccion"></h2>
+                                <img id="icono-animado" class="hidden" src="" alt="" height="128" width="128">
+                            </div>
+
+                            <div id="caja3">
+                                <h3 class="hidden" id="vientoTitulo">Velocidad del Viento</h3>
+                                <h3 id="viento-velocidad"></h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="appToDoCrono">
+            <h2>Toma el tiempo de tus actividades!</h2>
+            <section class="cronometro">
+                <div class="circle">
+                    <div id="stopwatch" class="stopwatch">00:00</div>
+                    <div class="buttons">
+                        <div class="stop" onclick="stop()"></div>
+                        <div id="play-pause" class="paused"></div>
+                    </div>
+                    <div id="seconds-sphere" class="seconds-sphere"></div>
+                </div>
+            </section>
+
+            <div class="toDoList">
+                <div class="agregar-tarea">
+                    <input type="text" id="input" placeholder="Nueva Tarea">
+                    <i id="boton-enter" class="fas fa-plus-circle"></i>
+                </div>
+                <div class="seccion-tarea">
+                    <h3>TAREAS</h3>
+                    <ul id="lista">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cripto">
+            <table class="tabla-css">
+                <thead>
+                    <tr>
+                        <th>Símbolo</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+
+                <tbody id="data">
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
