@@ -64,7 +64,8 @@ let iconoAnimado = document.getElementById("icono-animado");
 button.addEventListener('click', (e) => {
     e.preventDefault()
     traerCiudar(inputCiudad.value)
-    Swal.fire('Any fool can use a computer')
+    //SWEET ALERT
+    Swal.fire('Agregaste ciudad')
     vientoVelocidad.classList.remove("hidden")
     vientoTitulo.classList.remove("hidden")
     iconoAnimado.classList.remove("hidden")
