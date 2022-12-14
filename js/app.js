@@ -1,10 +1,3 @@
-// ES6 Modules or TypeScript
-import Swal from 'sweetalert2'
-
-// CommonJS
-const Swal = require('sweetalert2')
-
-
 //DATE
 const dateNumber = document.getElementById("dateNumber");
 const dateText = document.getElementById("dateText");
@@ -65,7 +58,7 @@ button.addEventListener('click', (e) => {
     e.preventDefault()
     traerCiudar(inputCiudad.value)
     //SWEET ALERT
-    Swal.fire('Agregaste ciudad')
+    Swal.fire('Cargando clima de tu ciudad')
     vientoVelocidad.classList.remove("hidden")
     vientoTitulo.classList.remove("hidden")
     iconoAnimado.classList.remove("hidden")
@@ -234,9 +227,8 @@ botonEnter.addEventListener('click', () => {
     const tarea = input.value
     if (tarea) {
         ///////-AGREGA TAREA
-        //toastr["info"]("Tarea agregada!", "Notificacion");
+
         console.log("Tarea Agregada")
-        swal("Good job!", "You clicked the button!", "success");
         //ohSnap('Oh Snap! I cannot process your card...', {color: "red"});  // alert will have class 'alert-color'
         agregarTarea(tarea, id, false, false)
         LIST.push({
@@ -249,6 +241,14 @@ botonEnter.addEventListener('click', () => {
         localStorage.setItem('TODO', JSON.stringify(LIST))
         id++
         input.value = ''
+
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Tarea Agregada',
+            showConfirmButton: false,
+            timer: 1500
+          })
     }
 
 })
@@ -286,13 +286,36 @@ lista.addEventListener('click', function (event) {
 
     if (elementData == 'realizado') {
         tareaRealizada(element)
+        
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Tarea Completada',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
     } else if (elementData == 'eliminado') {
-        tareaEliminada(element)
-        //ELIMINA TAREA
-        //toastr["error"]("Tarea Eliminada", "Notificacion")
-        console.log("ASDASDASDADS")
-        console.log("elimnado")
-        //ohSnap('Oh Snap! I cannot process your card...', {color: 'red'});  // alert will have class 'alert-color'
+        
+        Swal.fire({
+            title: 'Esta seguro que desea eliminar tarea?',
+            text: "No podras deshacer los cambios",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, borrar'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                //ELIMINA TAREA PRIMERO MUESTRA ALERT
+                tareaEliminada(element)
+                Swal.fire(
+                'Eliminado',
+                'Tu tarea ha sido eliminada',
+                'success'
+              )
+            }
+          })
     }
     localStorage.setItem('TODO', JSON.stringify(LIST))
 })
