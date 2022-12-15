@@ -11,10 +11,10 @@ const setDate = () => {
     });
     dateText.textContent = date.toLocaleString("es", {
         weekday: "long"
-    });
+    }).toUpperCase();
     dateMonth.textContent = date.toLocaleString("es", {
         month: "long"
-    });
+    }).toUpperCase();
     dateYear.textContent = date.toLocaleString("es", {
         year: "numeric"
     });

@@ -17,70 +17,61 @@
         <nav>
 
             <div class="container">
-                <div>Bruno Molezzi</div>
+
+                <div class="infoAlumno">
+                    <h2 class="mainSpan">Proyecto CODERHOUSE</h2>
+                    <h3>JavaScript</h3>
+                    <h4>Alumno: Bruno Molezzi</h4>
+                </div>
+
                 <div class="date">
+                    <div id="dateText">
+                    </div>
                     <div id="dateNumber">
 
                     </div>
-                    <div>
-                        <div id="dateMonth">
-
-                        </div>
-                        <div id="dateYear">
-
-                        </div>
+                    <div id="dateMonth">
                     </div>
-                    <div id="dateText">
+                    <div id="dateYear">
                     </div>
                 </div>
-                <div>
-                    <div class="container teext-center w-25 mt-4">
 
-                        <form>
-                            <input class="form-control" type="text" placeholder="elije tu ciudad">
-                            <button type="submit" class="mt-2 btn btn-primary">Buscar</button>
-                        </form>
+                <div id="contenedor">
 
-                        <div class="ciudad-container mt-4">
-                
-                        </div>
-                
-                
-                
+                    <div id="caja1">
+                        <h1 id="temperatura-valor"></h1>
+                        <h1 id="temperatura-descripcion"></h1>
                     </div>
-                    <div class="weather">
 
-                        <div class="container teext-center w-25 mt-4">
-                            <div class="ciudad-container mt-4"></div>
-                        </div>
-
-                        <div id="contenedor">
-
-                            <div id="caja1">
-                                <h1 id="temperatura-valor"></h1>
-                                <h1 id="temperatura-descripcion"></h1>
-                            </div>
-
-                            <div id="caja2">
-                                <h2 id="ubicaccion"></h2>
-                                <img id="icono-animado" class="hidden" src="" alt="" height="128" width="128">
-                            </div>
-
-                            <div id="caja3">
-                                <h3 class="hidden" id="vientoTitulo">Velocidad del Viento</h3>
-                                <h3 id="viento-velocidad"></h3>
-                            </div>
-
-                        </div>
+                    <div id="caja2">
+                        <h2 id="ubicaccion"></h2>
+                        <img id="icono-animado" class="hidden" src="" alt="" height="128" width="128">
                     </div>
+
+                    <div id="caja3">
+                        <h3 class="hidden" id="vientoTitulo">Velocidad del Viento</h3>
+                        <h3 id="viento-velocidad"></h3>
+                    </div>
+
                 </div>
+
+
+                <div class="container teext-center w-25 mt-4 searcher">
+                    <h2>Busca el clima en tu ciudad</h2>
+                    <form>
+                        <input class="form-control" type="text" placeholder="Escribe tu ciudad">
+                        <button type="submit" class="mt-2 btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+
+
         </nav>
     </header>
 
 
     <main>
         <div class="appToDoCrono">
-            <h2>Toma el tiempo de tus actividades!</h2>
+            <h2 class="mainSpan3">Toma el tiempo de tus actividades!</h2>
             <section class="cronometro">
                 <div class="circle">
                     <div id="stopwatch" class="stopwatch">00:00</div>
@@ -119,6 +110,15 @@
             </table>
         </div>
     </main>
+
+    <footer>
+        <h2>Tecnologias aplicadas:</h2>
+        <div class="logos">
+            <img src="./assets/htmlLogo.png" alt="LogoHtml"/>
+            <img src="./assets/cssLogo.png" alt="LogoCss"/>
+            <img src="./assets/javascriptLogo.png" alt="LogoJs"/>
+        </div>
+    </footer>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/app.js"></script>
 </body>
