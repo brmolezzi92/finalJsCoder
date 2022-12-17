@@ -13,10 +13,29 @@
     font-size: 3rem;
 }
 .mainSpan3 {
+    text-align: center;
     font-weight: 700;
     background: linear-gradient(90deg, rgba(218,165,32,1) 0%, rgb(169, 133, 43) 48%, rgb(115, 91, 31) 72%, rgb(218,165,32,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.inputClima{
+    padding: .5rem;
+    height: 3rem;
+    width: 70%;
+    border-radius: 5px;
+    border: none;
+}
+.botonClima{
+    height: 3rem;
+    padding: .5rem;
+    background-color: rgba(218,165,32,1);
+    font-weight: 700;
+    border: none;
+}
+.botonClima:hover{
+    background-color: black;
+    color: rgba(218,165,32,1);
 }
 
 .hidden {
@@ -42,6 +61,8 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 #contenedor{
     display: flex;
@@ -49,6 +70,7 @@ nav {
     justify-content: center;
 }
 .infoAlumno{
+    padding: 1rem;
     gap: 2rem;
     display:flex;
     flex-direction: column;
