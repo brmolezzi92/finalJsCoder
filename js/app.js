@@ -73,6 +73,7 @@ const traerCiudar =(ciudad) => {
         console.log(data.weather[0].description);
         let desc = data.weather[0].description
         temperaturaDescripcion.textContent = desc.toUpperCase();
+        console.log(data.weather)
 
         
         ubicaccion.textContent = data.name;
@@ -84,14 +85,12 @@ const traerCiudar =(ciudad) => {
         switch (data.weather[0].main) {
             case 'Clear':
                 iconoAnimado.src = 'animated/day.svg'
-                
                 break;
             case 'Clouds':
                 iconoAnimado.src = 'animated/cloudy.svg'
-
                 break;
             case 'Rain':
-                iconoAnimado.src = 'animated/rain.svg'
+                iconoAnimado.src = 'animated/rainy-1.svg'
                 break;
             case 'Snow':
                 iconoAnimado.src = 'animated/snow.svg'
@@ -102,11 +101,9 @@ const traerCiudar =(ciudad) => {
             case 'Drizzle':
                 iconoAnimado.src = 'animated/drizzle.svg'
                 break;
-
-        
             default:
                 break;
-        }      
+        }
     })
     .catch(error => {
         console.log(error);
