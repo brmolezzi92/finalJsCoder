@@ -93,7 +93,7 @@ const traerCiudar =(ciudad) => {
                 iconoAnimado.src = 'animated/rainy-1.svg'
                 break;
             case 'Snow':
-                iconoAnimado.src = 'animated/snow.svg'
+                iconoAnimado.src = 'animated/snowy-1.svg'
                 break;
             case 'Thunderstorm':
                 iconoAnimado.src = 'animated/thunder.svg'
